@@ -4,86 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Tools Review</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f9fafc;
-      color: #222;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background-color: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+      padding-bottom: 60px;
     }
 
     header {
-      background: #0077ff;
+      background: #1d4ed8;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 3rem 1rem;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     header h1 {
-      margin: 0;
       font-size: 2rem;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     header p {
-      margin-top: 0.5rem;
       font-size: 1.1rem;
       opacity: 0.9;
+      margin-top: 0.5rem;
     }
 
     main {
-      max-width: 900px;
-      margin: 3rem auto;
+      max-width: 1000px;
+      margin: 2rem auto;
       padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
     }
 
-    article {
+    .card {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      padding: 2rem;
-      margin-bottom: 2rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      transition: all 0.3s ease;
     }
 
-    article:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
 
-    article h2 {
-      margin-top: 0;
-      color: #0077ff;
-      font-size: 1.5rem;
+    .card h2 {
+      font-size: 1.3rem;
+      color: #1d4ed8;
+      margin-bottom: 0.6rem;
     }
 
-    article p {
-      line-height: 1.6;
-      color: #444;
+    .card p {
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 600;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      background: #f0f3f7;
-      color: #555;
-      margin-top: 4rem;
+      margin-top: 3rem;
+      color: #6b7280;
       font-size: 0.9rem;
-    }
-
-    a {
-      color: #0077ff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Digital Tools Review</h1>
@@ -91,27 +96,39 @@
   </header>
 
   <main>
-    <article>
-      <h2>Top 5 AI Tools to Boost Productivity</h2>
-      <p>Discover the most effective AI-based tools that can help you optimize your workflow and save hours of manual effort every week.</p>
+    <div class="card">
+      <h2>🧠 Top 5 AI Tools to Boost Productivity</h2>
+      <p>Discover the most effective AI-based tools that can help you optimize your workflow and save hours every week.</p>
       <a href="#">Read more →</a>
-    </article>
+    </div>
 
-    <article>
-      <h2>Why Minimal Design Still Wins in 2025</h2>
-      <p>Explore how simplicity continues to dominate digital design trends, and why minimalism enhances both usability and elegance.</p>
+    <div class="card">
+      <h2>🎨 Why Minimal Design Wins</h2>
+      <p>Understand how simplicity in design improves usability, performance, and brand trust in the digital world.</p>
       <a href="#">Read more →</a>
-    </article>
+    </div>
 
-    <article>
-      <h2>Mastering Content Automation</h2>
-      <p>Learn how to automate repetitive content tasks using advanced scheduling and AI-driven writing assistants.</p>
+    <div class="card">
+      <h2>🚀 Best Chrome Extensions for Creators</h2>
+      <p>Boost your online productivity with the most useful Chrome extensions for writing, editing, and automation.</p>
       <a href="#">Read more →</a>
-    </article>
+    </div>
+
+    <div class="card">
+      <h2>💻 How to Automate Tasks with AI</h2>
+      <p>Learn how to use automation tools and AI workflows to handle repetitive tasks and save valuable time.</p>
+      <a href="#">Read more →</a>
+    </div>
+
+    <div class="card">
+      <h2>📈 Top Productivity Systems Compared</h2>
+      <p>We break down the most popular productivity frameworks to find which one fits your workflow best.</p>
+      <a href="#">Read more →</a>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Digital Tools Review. All rights reserved.</p>
+    © 2025 Digital Tools Review. All rights reserved.
   </footer>
 </body>
 </html>
