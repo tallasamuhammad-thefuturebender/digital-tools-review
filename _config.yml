@@ -1,0 +1,20 @@
+title: "Digital Tools Review"
+description: "Honest reviews of the best digital tools for online business optimization"
+baseurl: ""
+url: "https://yourusername.github.io" # REPLACE yourusername with your actual GitHub username
+theme: minima
+
+# Navigation
+header_pages:
+  - index.md
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# SEO
+author: "Your Name" # REPLACE with your name
+twitter_username: yourusername # OPTIONAL
+github_username: yourusername # REPLACE with your GitHub username
