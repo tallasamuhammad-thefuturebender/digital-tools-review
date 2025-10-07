@@ -4,131 +4,147 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Tools Review</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Inter", sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background-color: #f9fafb;
-      color: #111827;
-      line-height: 1.6;
-      padding-bottom: 60px;
+      background: #f8faff;
+      margin: 0;
+      padding: 20px;
     }
 
-    header {
-      background: #1d4ed8;
-      color: white;
+    h1 {
       text-align: center;
-      padding: 3rem 1rem;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      color: #0b63f6;
+      margin-bottom: 30px;
     }
 
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
+    /* Search Bar */
+    .search-container {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-top: 0.5rem;
+    #searchInput {
+      padding: 12px 18px;
+      width: 80%;
+      max-width: 500px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s;
     }
 
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    #searchInput:focus {
+      border-color: #0b63f6;
+      box-shadow: 0 0 8px rgba(11,99,246,0.2);
+    }
+
+    /* Article Grid */
+    .articles-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    .card {
-      background: white;
-      border-radius: 18px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      padding: 1.5rem;
+    .article-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
-    .card h2 {
-      font-size: 1.3rem;
-      color: #1d4ed8;
-      margin-bottom: 0.6rem;
+    .article-card h2 {
+      color: #0b63f6;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
-    .card p {
-      color: #4b5563;
-      margin-bottom: 1rem;
+    .article-card p {
+      color: #444;
+      font-size: 15px;
+      margin-bottom: 15px;
+      line-height: 1.6;
     }
 
-    .card a {
+    .article-card a {
+      color: #0b63f6;
       text-decoration: none;
-      color: #2563eb;
       font-weight: 600;
     }
 
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      color: #6b7280;
-      font-size: 0.9rem;
+    .article-card a:hover {
+      text-decoration: underline;
     }
+
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>Digital Tools Review</h1>
-    <p>Smart insights on productivity, design, and AI tools</p>
-  </header>
 
-  <main>
-    <div class="card">
-      <h2>🧠 Top 5 AI Tools to Boost Productivity</h2>
-      <p>Discover the most effective AI-based tools that can help you optimize your workflow and save hours every week.</p>
+  <h1>Digital Tools Review</h1>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
+  </div>
+
+  <div class="articles-grid" id="articlesGrid">
+
+    <div class="article-card">
+      <h2>Top 5 AI Tools to Boost Productivity</h2>
+      <p>Discover the most effective AI-based tools that can help you optimize your workflow and save hours of manual effort every week.</p>
       <a href="#">Read more →</a>
     </div>
 
-    <div class="card">
-      <h2>🎨 Why Minimal Design Wins</h2>
-      <p>Understand how simplicity in design improves usability, performance, and brand trust in the digital world.</p>
+    <div class="article-card">
+      <h2>Why Minimal Design Still Wins in 2025</h2>
+      <p>Explore how simplicity continues to dominate digital design trends and why it remains a favorite for creators and audiences alike.</p>
       <a href="#">Read more →</a>
     </div>
 
-    <div class="card">
-      <h2>🚀 Best Chrome Extensions for Creators</h2>
-      <p>Boost your online productivity with the most useful Chrome extensions for writing, editing, and automation.</p>
+    <div class="article-card">
+      <h2>Top SEO Strategies for Small Businesses</h2>
+      <p>Learn the latest SEO tactics to boost your website’s visibility and reach the right audience in 2025.</p>
       <a href="#">Read more →</a>
     </div>
 
-    <div class="card">
-      <h2>💻 How to Automate Tasks with AI</h2>
-      <p>Learn how to use automation tools and AI workflows to handle repetitive tasks and save valuable time.</p>
+    <div class="article-card">
+      <h2>5 Free Tools to Automate Your Social Media</h2>
+      <p>Manage your posts efficiently with these free automation tools designed to save you time and grow your online presence.</p>
       <a href="#">Read more →</a>
     </div>
 
-    <div class="card">
-      <h2>📈 Top Productivity Systems Compared</h2>
-      <p>We break down the most popular productivity frameworks to find which one fits your workflow best.</p>
+    <div class="article-card">
+      <h2>How to Start a Blog That Makes Money in 2025</h2>
+      <p>Get a step-by-step guide on how to build a blog, attract readers, and monetize your passion effectively.</p>
       <a href="#">Read more →</a>
     </div>
-  </main>
 
-  <footer>
-    © 2025 Digital Tools Review. All rights reserved.
-  </footer>
+  </div>
+
+  <script>
+    function searchArticles() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".article-card");
+
+      cards.forEach(card => {
+        const title = card.querySelector("h2").innerText.toLowerCase();
+        card.style.display = title.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
 </body>
 </html>
